@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+David you gay slut, this website won't make shit!!!
+<br>
+<button onclick="myFunction()">Start</button> <button onclick="myFunction2()">Stop</button>
+<br>
+
+<textarea id="myTextarea" rows="4" cols="50" disabled>
+</textarea>
+
+<p id="demo"></p>
+
+<script>
+var start;
+var x;
+var y = "David you gay slut, this website won't make shit!!!\n";;
+function myFunction() {
+  start = new Date();
+  document.getElementById("myTextarea").disabled = false;
+  document.getElementById("myTextarea").select();
+	document.getElementById("myTextarea").addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        myFunction2();
+    }
+	});
+	
+}
+
+function myFunction2() {
+x = document.getElementById("myTextarea").value;
+if (x == y){
+		
+		var elapsed = new Date() - start;
+		var secs = elapsed / 1000;
+		var per = 60 / secs;
+		
+		var typingSpeed = 9*per;
+		document.getElementById("demo").innerHTML = "Your typing speed is:";
+		document.getElementById("demo").innerHTML = typingSpeed;
+	}
+
+	
+}
+
+
+</script>
+</body>
+</html>
