@@ -2,7 +2,9 @@
 <html>
 <body>
 
-David you gay slut, this website won't make shit!!!
+Type in the phrase after click the start button.
+<br>
+<p id="demo1"></p>
 <br>
 <button onclick="myFunction()">Start</button> <button onclick="myFunction2()">Stop</button>
 <br>
@@ -10,20 +12,28 @@ David you gay slut, this website won't make shit!!!
 <textarea id="myTextarea" rows="4" cols="50" disabled>
 </textarea>
 
+<p id="demo2"></p>
 <p id="demo"></p>
+
 
 <script>
 var start;
 var x;
-var y = "David you gay slut, this website won't make shit!!!\n";;
+var cars = ["JavaScript arrays are used to store multiple values in a single variable.\n", "An array can hold more than one value at a time, allegedly.\n", "This is the easiest sentence of your life:<>?12 3!@#you joking.\n"];
+var randomItem = cars[Math.floor(Math.random()*cars.length)];
+var y = randomItem;
+document.getElementById("demo1").innerHTML = randomItem;
 function myFunction() {
+
   start = new Date();
   document.getElementById("myTextarea").disabled = false;
   document.getElementById("myTextarea").select();
 	document.getElementById("myTextarea").addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode === 13) {
+		document.getElementById("myTextarea").disabled = true;
         myFunction2();
+		
     }
 	});
 	
@@ -37,13 +47,16 @@ if (x == y){
 		var secs = elapsed / 1000;
 		var per = 60 / secs;
 		
-		var typingSpeed = 9*per;
-		document.getElementById("demo").innerHTML = "Your typing speed is:";
+		var typingSpeed = 12*per;
+		
+		document.getElementById("demo2").innerHTML = "Your typing speed is:";
 		document.getElementById("demo").innerHTML = typingSpeed;
 	}
-
-	
+else {
+document.getElementById("demo2").innerHTML = "You Typed in the wrong setence. Dumbass!!";
 }
+}
+
 
 
 </script>
