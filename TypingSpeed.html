@@ -2,7 +2,7 @@
 <html>
 <body>
 
-Type in the phrase after click the start button.
+Click on the start button and type in the phrase below:
 <br>
 <p id="demo1"></p>
 <br>
@@ -19,7 +19,9 @@ Type in the phrase after click the start button.
 <script>
 var start;
 var x;
-var cars = ["JavaScript arrays are used to store multiple values in a single variable.\n", "An array can hold more than one value at a time, allegedly.\n", "This is the easiest sentence of your life:<>?12 3!@#you joking.\n"];
+var cars = ["JavaScript arrays are used to store multiple values in a single variable.\n",
+	    "An array can hold more than one value at a time, allegedly.\n",
+	    "Some specialty tickets remain, including access to premium hospitality areas, the infield and the pre-race concert featuring country/pop star Darius Rucker.\n"];
 var randomItem = cars[Math.floor(Math.random()*cars.length)];
 var y = randomItem;
 document.getElementById("demo1").innerHTML = randomItem;
@@ -53,7 +55,7 @@ if (x == y){
 		document.getElementById("demo").innerHTML = typingSpeed;
 	}
 else {
-document.getElementById("demo2").innerHTML = "You Typed in the wrong setence. Dumbass!!";
+document.getElementById("demo2").innerHTML = "You Typed in the wrong setence.";
 }
 }
 
